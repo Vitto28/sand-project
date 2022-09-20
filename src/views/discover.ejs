@@ -1,0 +1,27 @@
+<section id="discover">
+  <!-- This setup can be expanded with more discover areas
+             Eg: hot, new, popular, for you, etc -->
+
+  <article class="discover_section" id="general">
+    
+    <% if (data == undefined || data.length == 0) { %>
+
+      <div id="no_collections">No collections were found. Try again.</div>
+
+    <% } else { %>
+
+      <h1>Discover collections</h1>
+      <ul class="discover_lineup">
+        <% data.forEach( item => { %>
+          <li class="discover_item grow_hover shadow"><a href="<%= item.link %>">
+              <img src="<%= item.img %>" alt="<%= item.title %>">
+              <h1><%= item.title %></h1>
+          </a></li>
+        <% }) %>
+      </ul>
+
+    <% } %>  
+
+  </article>
+
+</section>

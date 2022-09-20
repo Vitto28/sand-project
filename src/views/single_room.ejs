@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link href="stylesheets/single_room.css" rel="stylesheet" />
+    <link href="stylesheets/general.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="room_container">
+        <section class="room">
+            <!-- central part -->
+            <div id="chat_shadow"></div>
+            <section id="chat">
+                <% messages.forEach(msg => { %>
+                    <section class="message">
+                        <h1 id="username">ayyy</h1>
+                        <p id="msg">ayy</p>
+                    </section>
+                        
+                <% }); %>
+            </section>
+        
+            <!-- below the chat messages -->
+            <section id="input">
+                <button class="grow_hover" id="leave_room">Leave room</button>
+                <div id="input">
+                    <label for="msg">
+                        <input id="msg" type="text" name="msg" value="" placeholder="Type here your message"/>
+                    </label>
+                    <button class="grow_hover" id="send">Send</button>
+                </div>
+            </section>
+        
+            <!-- member list aside -->
+            <section id="members">
+                <section id="normal_members">
+        
+                    <h2>Members</h2>
+                    <ul class="member_list">
+                        
+                    </ul>
+                    
+                </section>
+            </section>
+        </section>  
+    </div>
+    
+</body>
+
+</html>
+

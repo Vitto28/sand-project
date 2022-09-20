@@ -1,0 +1,38 @@
+<div id="room_container">
+    <section class="room">
+        <!-- central part -->
+        <div id="chat_shadow"></div>
+        <section id="chat">
+            <% let prev %>
+            <% messages.forEach(msg => { %>
+                <section class="message"></section>
+                    <h1 id="username"> <%= msg.user.username %> </h1>
+                    <p id="msg"> <%= msg.msg %> </p>
+                </section>
+            <% }); %>
+        </section>
+    
+        <!-- below the chat messages -->
+        <section id="input">
+            <button class="grow_hover" id="leave_room">Leave room</button>
+            <div id="input">
+                <label for="msg">
+                    <input id="msg" type="text" name="msg" value="" placeholder="Type here your message"/>
+                </label>
+                <button class="grow_hover" id="send">Send</button>
+            </div>
+        </section>
+    
+        <!-- member list aside -->
+        <section id="members">
+            <section id="normal_members">
+    
+                <h2>Members</h2>
+                <ul class="member_list">
+                    
+                </ul>
+                
+            </section>
+        </section>
+    </section>  
+</div>

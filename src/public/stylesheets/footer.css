@@ -1,0 +1,32 @@
+#chat {
+    width: 60px;
+    height: 60px;
+    right: 0px;
+    bottom: 15%;
+    right: 3%;
+    position: absolute;
+}
+
+footer {
+    align-items: center;
+    background-color: var(--lightblue);
+    display: flex;
+    height: 90px;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;   
+}
+
+.social img {
+    height: 30px;
+    width: 30px;
+}
+
+#logo {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+}
+   
+

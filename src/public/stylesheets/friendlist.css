@@ -1,0 +1,259 @@
+section#friendlist {
+    width: 85%;
+    min-width: 400px;
+    min-height: 600px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 5fr minmax(120px, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "pg bm";
+}
+
+#page {
+    border-radius: 10px 0px 0px 10px;
+    grid-area: pg;
+    z-index: 12;
+    width: 100%;
+    max-height: 650px;
+}
+
+
+#page>h1 {
+    padding-left: 20px;
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 3.1em;
+    letter-spacing: .2em;
+}
+
+/* Change color based on content */
+
+#page.friends {
+    background-color: var(--pink) !important;
+}
+
+#page.friends li.friend #info {
+    background-color: var(--lightpink);
+}
+
+#page.requests {
+    background-color: var(--lightblue) !important;
+}
+
+#page.requests li.friend #info {
+    background-color: var(--deepblue);
+    color: #f0f0f0 !important;
+}
+
+#page.sent_requests {
+    background-color: var(--deepblue) !important;
+}
+
+#page.sent_requests  li.friend #info {
+    background-color: var(--lightblue);
+    color: #f0f0f0 !important;
+}
+
+#page.search {
+    background-color: var(--deepblue) !important;
+}
+
+#page.search  li.friend #info {
+    background-color: var(--lightblue);
+    color: #f0f0f0 !important;
+}
+
+section#bookmarks {
+    grid-area: bm;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(19, 1fr);
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px, rgba(0, 0, 0, 0.1) 0px 3px 3px;
+}
+
+section#bookmarks>div.bookmark {
+    border-radius: 0px 10px 10px 0px;
+    width: 90%;
+    transition: all 0.1s ease-in-out;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+section#bookmarks>div.bookmark:hover {
+    cursor: pointer;
+    width: 100%;
+    z-index: 11 !important;
+}
+
+section#bookmarks :not(:first-child):not(:last-child) {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 5px 15px, rgba(0, 0, 0, 0.3) -10px -5px 15px;
+}
+
+section#bookmarks :first-child {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 5px 15px;
+}
+
+section#bookmarks :last-child {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px -5px 15px;
+}
+
+section#bookmarks>*::before {
+    width: 90%;
+    padding-left: 15px;
+    color: #f0f0f0;
+}
+
+
+/* Bookmark Colors */
+
+section#bookmarks .current {
+    z-index: 5 !important;
+    width: 100% !important;
+}
+
+section#bookmarks :nth-child(1) {
+    background-color: var(--deepblue);
+}
+
+section#bookmarks :nth-child(1)::before {
+    content: "Find Users";
+}
+
+section#bookmarks :nth-child(2) {
+    background-color: var(--blue);
+}
+
+section#bookmarks :nth-child(3) {
+    background-color: var(--lightblue);
+}
+
+section#bookmarks :nth-child(3)::before {
+    content: "Friend Requests";
+}
+
+section#bookmarks :nth-child(4) {
+    background-color: var(--lightpink);
+}
+
+section#bookmarks :nth-child(5) {
+    background-color: var(--pink);
+}
+
+section#bookmarks :nth-child(5)::before {
+    content: "Your Friends";
+}
+
+section#bookmarks :nth-child(6) {
+    background-color: var(--purple);
+}
+
+section#bookmarks :nth-child(7) {
+    background-color: var(--deepblue);
+}
+
+section#bookmarks :nth-child(7)::before {
+    content: "Sent Requests";
+}
+
+section#bookmarks :nth-child(8) {
+    background-color: var(--blue);
+}
+
+section#bookmarks :nth-child(9) {
+    background-color: var(--lightblue);
+}
+
+
+/* Friend items */
+
+#page > .list {
+    height: 100%;
+}
+
+#page ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.friend {
+    margin: 20px 10px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.friend #info {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+    border-radius: 25px;
+    margin-left: 15px;
+}
+
+.friend #info h1 {
+    font-size: 1.5em;
+}
+
+.friend #info #avatar {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    height: 65px;
+    width: 65px;
+}
+
+.friend #buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.friend #buttons button {
+    padding: 0px 15px !important;
+    font-size: 13px;
+}
+
+/* Search for users */
+
+#page.search .list {
+    height: 90%;
+}
+
+#page.search #searchbar {
+    display: flex !important;
+}
+
+#page.search #searchbar form {
+    margin: 10px 0px 10px 20px;
+} 
+
+#friendlist #searchbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 910px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+#friendlist #searchbar button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--white);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}

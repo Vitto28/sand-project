@@ -1,0 +1,78 @@
+{
+  "name": "sand",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development node ./bin/www",
+    "start:production": "NODE_ENV=production node ./bin/www",
+    "test": "npm run lint && NODE_ENV=test mocha --exit ./src/test",
+    "lint": "npx eslint ./src",
+    "lint:fix": "npx eslint --fix ./src",
+    "docs": "npx jsdoc -d documentation/docs -r --verbose ./src && echo '\n<-> Documentation created and stored in ./documentation/docs <->\n'",
+    "test:nolint": "NODE_ENV=test mocha --exit ./src/test",
+    "start:test": "NODE_ENV=test node ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "chai": "^4.3.4",
+    "config": "^3.3.6",
+    "connect-redis": "^6.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "~2.6.1",
+    "ejsc": "^0.1.0",
+    "events": "^3.3.0",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "fs-extra": "^10.0.0",
+    "glob-fs": "^0.1.7",
+    "http-errors": "~1.6.3",
+    "ioredis": "^4.28.2",
+    "jdenticon": "^3.1.1",
+    "jsdoc": "^3.6.7",
+    "method-override": "^3.0.0",
+    "mocha": "^9.1.3",
+    "mongodb": "^4.2.0",
+    "morgan": "~1.9.1",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "rewire": "^5.0.0",
+    "socket.io": "^4.4.0",
+    "supertest": "^6.1.6"
+  },
+  "description": "Decentralized smart NFT analytics.",
+  "main": "www",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GPrendi30/sand.git"
+  },
+  "keywords": [
+    "blockchain",
+    "nft",
+    "defi",
+    "analytics",
+    "nodejs",
+    "express",
+    "mongo"
+  ],
+  "author": " (gprendi30 : [https://github.com/GPrendi30/])",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GPrendi30/sand/issues"
+  },
+  "homepage": "https://github.com/GPrendi30/sand#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1"
+  },
+  "engines": {
+    "npm": ">=7",
+    "node": ">=14"
+  }
+}
